@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Conteúdo digital</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="secao home" id="home">
+		<header class="botoes">
+			<a href="assets/pptx/SPE_BRI_EI41_30_2ap.pptx" target="_blank" download="Documento .pptx." type="botao-baixar-arquivo"><img src="assets/componentes/botao-baixar-arquivo.svg" alt="Botão para baixar o arquivo"></a>
+			<a  href="#" target="_self"><img src="assets/componentes/botao-creditos.svg" alt="Botão para os créditos"></a>
+		</header>
+		<h1><span>Obras de</span><br>Joaquín Torres Garcia</h1>
+		<section class="botoes" id="iniciar">
+			<a onclick="pularTela('home','carro')"><img src="assets/componentes/botao-iniciar.svg" alt="Botão para o início do conteúdo."></a>
+		</section>
+		<div id="nuvemAnimada2"><img src="assets/componentes/nuvem-02.svg"></div>
+	</div>
+	<div class="secao carro" id="carro" style="display: none">
+		<p>Carro preto e vermelho, 1917-19</p>
+		<img class="obra" src="assets/obras/carro-preto-e-vermelho-1917-19.jpg" alt="Imagem de um carrinho de madeira."><br>
+		<section class="botoes">
+			<a onclick="pularTela('carro','home')"><img src="assets/componentes/botao-home.svg" alt="Botão para a página inicial."></a>
+			<a onclick="pularTela('carro','girafa')"><img src="assets/componentes/botao-proximo.svg" alt="Botão para a próxima página."></a>
+		</section>
+	</div>
+	<div class="secao girafa" id="girafa" style="display: none;">
+		<p>Girafa, 1917-19</p>
+		<img class="obra" src="assets/obras/girafa-1917-19.jpg" alt="Imagem de uma girafa de madeira."><br>
+		<section class="botoes">
+			<a onclick="pularTela('girafa','carro')"><img src="assets/componentes/botao-voltar.svg" alt="Botão para a página anterior."></a>
+			<a onclick="pularTela('girafa','home')"><img src="assets/componentes/botao-home.svg" alt="Botão para a página inicial."></a>
+			<a onclick="pularTela('girafa','cachorros')"><img src="assets/componentes/botao-proximo.svg" alt="Botão para a próxima página."></a>
+		</section>
+	</div>
+
+	<div class="secao cachorros" id="cachorros" style="display: none;">
+		<p>Cachorrinhos, 1922-23</p>
+		<img class="obra" src="assets/obras/cachorrinhos-1922-23.jpg" alt="Imagem de dois cachorrinhos de madeira."><br>
+		<section class="botoes">
+			<a onclick="pularTela('cachorros','girafa')"><img src="assets/componentes/botao-voltar.svg" alt="Botão para a página anterior."></a>
+			<a onclick="pularTela('cachorros','home')"><img src="assets/componentes/botao-home.svg" alt="Botão para a página inicial."></a>
+			<a onclick="pularTela('cachorros','coelho')"><img src="assets/componentes/botao-proximo.svg" alt="Botão para a próxima página."></a>
+		</section>
+	</div>
+	<div class="secao coelho" id="coelho" style="display: none;">
+		<p>Coelho, 1928</p>
+		<img class="obra" src="assets/obras/coelho-1928.jpg" alt="Imagem de um coelho de madeira."><br>
+		<section class="botoes">
+			<a onclick="pularTela('coelho','cachorros')"><img src="assets/componentes/botao-voltar.svg" alt="Botão para a página anterior."></a>
+			<a onclick="pularTela('coelho','home')"><img src="assets/componentes/botao-home.svg" alt="Botão para a página inicial."></a>
+			<a onclick="pularTela('coelho','barco')"><img src="assets/componentes/botao-proximo.svg" alt="Botão para a próxima página."></a>
+		</section>
+	</div>
+
+	<div class="secao barco" id="barco" style="display: none;">
+		<p>Barco, s-f</p>
+		<img class="obra" src="assets/obras/barco-s-f.jpg" alt="Imagem de um barco de madeira."><br>
+		<section class="botoes">
+			<a onclick="pularTela('barco','coelho')"><img src="assets/componentes/botao-voltar.svg" alt="Botão para a página anterior."></a>
+			<a onclick="pularTela('barco','home')"><img src="assets/componentes/botao-home.svg" alt="Botão para a página inicial."></a>
+		</section>
+	</div>
+	<script type="text/javascript">
+		function pularTela(esconder,mostrar){
+			document.getElementById(esconder).style.display="none";
+			document.getElementById(mostrar).style.display="flex";
+		}
+	</script>
+</body>
+</html>
